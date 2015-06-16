@@ -47,6 +47,7 @@ class LoginViewController: UIViewController {
             if let user = user {
                 if user.isNew {
                     println("User signed up and logged in through Facebook!")
+                    self.performSegueWithIdentifier("welcomeSegue", sender: self)
 
                 } else {
                     println("User logged in through Facebook!")
@@ -62,8 +63,8 @@ class LoginViewController: UIViewController {
     func userLoggedIn(user: PFUser) {
         //PushNotication.parsePushUserAssign()
         ProgressHUD.showSuccess("Welcome Back!")
-        //self.dismissViewControllerAnimated(true, completion: nil)
-        performSegueWithIdentifier("dismissView", sender: self)
+        self.dismissViewControllerAnimated(true, completion: nil)
+        //performSegueWithIdentifier("dismissView", sender: self)
         
         
     }
@@ -127,6 +128,12 @@ class LoginViewController: UIViewController {
 //        }
 //    }
 
+    override func viewDidAppear(animated: Bool) {
+        if PFUser.currentUser() != nil {
+            println("User loggined in")
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
 
 }
 

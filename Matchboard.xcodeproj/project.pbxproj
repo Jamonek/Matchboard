@@ -51,6 +51,10 @@
 		CE8B5D831AFB223E00DDD336 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D661AFB223E00DDD336 /* TransitionZoom.swift */; };
 		CE8B5D841AFB223E00DDD336 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D671AFB223E00DDD336 /* UnwindSegue.swift */; };
 		CEAB271A1B0DBD2A00279889 /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB27191B0DBD2A00279889 /* AdTableViewCell.swift */; };
+		CEB3891A1B2FC9EA00F38492 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB389131B2FC9EA00F38492 /* TPKeyboardAvoidingCollectionView.m */; };
+		CEB3891B1B2FC9EA00F38492 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB389151B2FC9EA00F38492 /* TPKeyboardAvoidingScrollView.m */; };
+		CEB3891C1B2FC9EA00F38492 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB389171B2FC9EA00F38492 /* TPKeyboardAvoidingTableView.m */; };
+		CEB3891D1B2FC9EA00F38492 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB389191B2FC9EA00F38492 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		CEBA34A91B144C7800C3F406 /* AdProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA34A81B144C7800C3F406 /* AdProfileViewController.swift */; };
 		CEC0632F1B276FE5002A28C6 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEC0632C1B276FE5002A28C6 /* ProgressHUD.bundle */; };
 		CEC063301B276FE5002A28C6 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC0632E1B276FE5002A28C6 /* ProgressHUD.m */; };
@@ -138,6 +142,14 @@
 		CE8B5D661AFB223E00DDD336 /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		CE8B5D671AFB223E00DDD336 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		CEAB27191B0DBD2A00279889 /* AdTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
+		CEB389121B2FC9EA00F38492 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		CEB389131B2FC9EA00F38492 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		CEB389141B2FC9EA00F38492 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		CEB389151B2FC9EA00F38492 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		CEB389161B2FC9EA00F38492 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		CEB389171B2FC9EA00F38492 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		CEB389181B2FC9EA00F38492 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		CEB389191B2FC9EA00F38492 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		CEBA34A81B144C7800C3F406 /* AdProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdProfileViewController.swift; sourceTree = "<group>"; };
 		CEC0632C1B276FE5002A28C6 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		CEC0632D1B276FE5002A28C6 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
@@ -243,6 +255,7 @@
 		CE735D3E1AC7D1FD00CD18D8 /* Matchboard */ = {
 			isa = PBXGroup;
 			children = (
+				CEB389111B2FC9EA00F38492 /* TPKeyboardAvoiding */,
 				CE7A6BDA1B2FADFD0098775E /* FBSDKCoreKit.framework */,
 				CE7A6BD81B2FADEC0098775E /* Bolts.framework */,
 				CE7A6BD61B2FADD60098775E /* FBSDKLoginKit.framework */,
@@ -345,6 +358,21 @@
 				CE8B5D671AFB223E00DDD336 /* UnwindSegue.swift */,
 			);
 			path = Spring;
+			sourceTree = "<group>";
+		};
+		CEB389111B2FC9EA00F38492 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				CEB389121B2FC9EA00F38492 /* TPKeyboardAvoidingCollectionView.h */,
+				CEB389131B2FC9EA00F38492 /* TPKeyboardAvoidingCollectionView.m */,
+				CEB389141B2FC9EA00F38492 /* TPKeyboardAvoidingScrollView.h */,
+				CEB389151B2FC9EA00F38492 /* TPKeyboardAvoidingScrollView.m */,
+				CEB389161B2FC9EA00F38492 /* TPKeyboardAvoidingTableView.h */,
+				CEB389171B2FC9EA00F38492 /* TPKeyboardAvoidingTableView.m */,
+				CEB389181B2FC9EA00F38492 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				CEB389191B2FC9EA00F38492 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 		CEC0632B1B276FE5002A28C6 /* ProgressHUD */ = {
@@ -507,14 +535,17 @@
 				CE735D441AC7D1FD00CD18D8 /* ViewController.swift in Sources */,
 				CE8B5D791AFB223E00DDD336 /* SoundPlayer.swift in Sources */,
 				CE8B5D801AFB223E00DDD336 /* SpringTextView.swift in Sources */,
+				CEB3891A1B2FC9EA00F38492 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				CE735D421AC7D1FD00CD18D8 /* AppDelegate.swift in Sources */,
 				CE7A6BDF1B2FB12C0098775E /* WelcomeViewController.swift in Sources */,
 				CE8B5D721AFB223E00DDD336 /* DesignableView.swift in Sources */,
 				CE8B5D7B1AFB223E00DDD336 /* SpringAnimation.swift in Sources */,
 				CE8B5D7A1AFB223E00DDD336 /* Spring.swift in Sources */,
 				CE8B5D761AFB223E00DDD336 /* LoadingView.swift in Sources */,
+				CEB3891B1B2FC9EA00F38492 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				CEBA34A91B144C7800C3F406 /* AdProfileViewController.swift in Sources */,
 				CE8B5D7F1AFB223E00DDD336 /* SpringTextField.swift in Sources */,
+				CEB3891C1B2FC9EA00F38492 /* TPKeyboardAvoidingTableView.m in Sources */,
 				CE8B5D6C1AFB223E00DDD336 /* DesignableButton.swift in Sources */,
 				CE7A6BDD1B2FB0C70098775E /* RegisterViewController.swift in Sources */,
 				CE8B5D701AFB223E00DDD336 /* DesignableTextField.swift in Sources */,
@@ -525,6 +556,7 @@
 				CE3FA5C41B2023E400762DA1 /* LoginViewController.swift in Sources */,
 				CEC063301B276FE5002A28C6 /* ProgressHUD.m in Sources */,
 				CE8B5D6F1AFB223E00DDD336 /* DesignableTabBarController.swift in Sources */,
+				CEB3891D1B2FC9EA00F38492 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				CE8B5D6A1AFB223E00DDD336 /* AutoTextView.swift in Sources */,
 				CE8B5D711AFB223E00DDD336 /* DesignableTextView.swift in Sources */,
 				CE8B5D6E1AFB223E00DDD336 /* DesignableLabel.swift in Sources */,

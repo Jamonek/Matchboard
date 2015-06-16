@@ -10,6 +10,7 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var adTextView: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +23,14 @@ class WelcomeViewController: UIViewController {
     }
     
 
+    @IBAction func nextButtonTapped(sender: AnyObject) {
+    }
    
+    @IBAction func skipButtonTapped(sender: AnyObject) {
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        view.endEditing(true)
+    }
 
 }
