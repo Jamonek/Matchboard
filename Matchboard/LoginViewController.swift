@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
         println("Phone Number Button Tapped")
         phoneNumberButton.animation = "pop"
         phoneNumberButton.animate()
+        self.performSegueWithIdentifier("phoneSegue", sender: self)
     }
     
     @IBAction func facebookRegisterButtonTapped(sender: SpringButton) {

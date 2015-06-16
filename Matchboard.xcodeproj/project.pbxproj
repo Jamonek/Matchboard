@@ -16,6 +16,11 @@
 		CE735D4C1AC7D1FD00CD18D8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE735D4A1AC7D1FD00CD18D8 /* LaunchScreen.xib */; };
 		CE735D581AC7D1FE00CD18D8 /* MatchboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735D571AC7D1FE00CD18D8 /* MatchboardTests.swift */; };
 		CE735D621AC7D29800CD18D8 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = CE735D611AC7D29800CD18D8 /* splash.png */; };
+		CE7A6BD71B2FADD60098775E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A6BD61B2FADD60098775E /* FBSDKLoginKit.framework */; };
+		CE7A6BD91B2FADEC0098775E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A6BD81B2FADEC0098775E /* Bolts.framework */; };
+		CE7A6BDB1B2FADFD0098775E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A6BDA1B2FADFD0098775E /* FBSDKCoreKit.framework */; };
+		CE7A6BDD1B2FB0C70098775E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A6BDC1B2FB0C70098775E /* RegisterViewController.swift */; };
+		CE7A6BDF1B2FB12C0098775E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A6BDE1B2FB12C0098775E /* WelcomeViewController.swift */; };
 		CE8B5D681AFB223E00DDD336 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4A1AFB223E00DDD336 /* AsyncButton.swift */; };
 		CE8B5D691AFB223E00DDD336 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4B1AFB223E00DDD336 /* AsyncImageView.swift */; };
 		CE8B5D6A1AFB223E00DDD336 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4C1AFB223E00DDD336 /* AutoTextView.swift */; };
@@ -65,9 +70,6 @@
 		CEC948DC1AD7715C000E95F2 /* Nav Bar iphone 5.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC948D91AD7715C000E95F2 /* Nav Bar iphone 5.png */; };
 		CEC948DD1AD7715C000E95F2 /* Nav Bar iphone 6 Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC948DA1AD7715C000E95F2 /* Nav Bar iphone 6 Plus.png */; };
 		CEC948DE1AD7715C000E95F2 /* Nav Bar iphone 6.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC948DB1AD7715C000E95F2 /* Nav Bar iphone 6.png */; };
-		CECCDCF01B2678F4003DE198 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECCDCEF1B2678F4003DE198 /* FBSDKCoreKit.framework */; };
-		CECCDCF21B267942003DE198 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECCDCF11B267942003DE198 /* Bolts.framework */; };
-		CECCDCF41B26796C003DE198 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECCDCF31B26796C003DE198 /* FBSDKLoginKit.framework */; };
 		CEDF38611B0EB94200029A20 /* AdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF38601B0EB94200029A20 /* AdModel.swift */; };
 		CEE12EEA1B2672010093ABAB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE12EE91B2672010093ABAB /* Parse.framework */; };
 		CEE12EEC1B2672310093ABAB /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE12EEB1B2672310093ABAB /* ParseFacebookUtilsV4.framework */; };
@@ -100,6 +102,11 @@
 		CE735D561AC7D1FE00CD18D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE735D571AC7D1FE00CD18D8 /* MatchboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchboardTests.swift; sourceTree = "<group>"; };
 		CE735D611AC7D29800CD18D8 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		CE7A6BD61B2FADD60098775E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		CE7A6BD81B2FADEC0098775E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		CE7A6BDA1B2FADFD0098775E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		CE7A6BDC1B2FB0C70098775E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CE7A6BDE1B2FB12C0098775E /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CE8B5D4A1AFB223E00DDD336 /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		CE8B5D4B1AFB223E00DDD336 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		CE8B5D4C1AFB223E00DDD336 /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
@@ -151,9 +158,6 @@
 		CEC948D91AD7715C000E95F2 /* Nav Bar iphone 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav Bar iphone 5.png"; sourceTree = "<group>"; };
 		CEC948DA1AD7715C000E95F2 /* Nav Bar iphone 6 Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav Bar iphone 6 Plus.png"; sourceTree = "<group>"; };
 		CEC948DB1AD7715C000E95F2 /* Nav Bar iphone 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav Bar iphone 6.png"; sourceTree = "<group>"; };
-		CECCDCEF1B2678F4003DE198 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		CECCDCF11B267942003DE198 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../../../../Documents/FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
-		CECCDCF31B26796C003DE198 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		CEDF38601B0EB94200029A20 /* AdModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdModel.swift; sourceTree = "<group>"; };
 		CEE12EE91B2672010093ABAB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CEE12EEB1B2672310093ABAB /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
@@ -167,16 +171,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC14CE11B1E265A009555A0 /* Social.framework in Frameworks */,
-				CECCDCF21B267942003DE198 /* Bolts.framework in Frameworks */,
-				CECCDCF41B26796C003DE198 /* FBSDKLoginKit.framework in Frameworks */,
 				CEC14CDF1B1E264E009555A0 /* Accounts.framework in Frameworks */,
 				CEC14CDD1B1E2643009555A0 /* libsqlite3.dylib in Frameworks */,
 				CEC14CDB1B1E262F009555A0 /* libz.dylib in Frameworks */,
 				CEE12EEA1B2672010093ABAB /* Parse.framework in Frameworks */,
 				CEC14CD91B1E261E009555A0 /* SystemConfiguration.framework in Frameworks */,
 				CEC14CD71B1E25FD009555A0 /* StoreKit.framework in Frameworks */,
-				CECCDCF01B2678F4003DE198 /* FBSDKCoreKit.framework in Frameworks */,
 				CEC14CD51B1E25F5009555A0 /* Security.framework in Frameworks */,
+				CE7A6BD71B2FADD60098775E /* FBSDKLoginKit.framework in Frameworks */,
 				CEC14CD31B1E25DF009555A0 /* QuartzCore.framework in Frameworks */,
 				CEE12EEE1B26733E0093ABAB /* ParseUI.framework in Frameworks */,
 				CEC14CD11B1E25CF009555A0 /* MobileCoreServices.framework in Frameworks */,
@@ -184,6 +186,8 @@
 				CEC14CCF1B1E25BC009555A0 /* CoreLocation.framework in Frameworks */,
 				CEC14CCD1B1E25B5009555A0 /* CoreGraphics.framework in Frameworks */,
 				CEC14CCB1B1E25A7009555A0 /* CFNetwork.framework in Frameworks */,
+				CE7A6BD91B2FADEC0098775E /* Bolts.framework in Frameworks */,
+				CE7A6BDB1B2FADFD0098775E /* FBSDKCoreKit.framework in Frameworks */,
 				CEC14CC91B1E259B009555A0 /* AudioToolbox.framework in Frameworks */,
 				22BB68C70F9EBC16041B3597 /* libPods.a in Frameworks */,
 			);
@@ -239,10 +243,10 @@
 		CE735D3E1AC7D1FD00CD18D8 /* Matchboard */ = {
 			isa = PBXGroup;
 			children = (
+				CE7A6BDA1B2FADFD0098775E /* FBSDKCoreKit.framework */,
+				CE7A6BD81B2FADEC0098775E /* Bolts.framework */,
+				CE7A6BD61B2FADD60098775E /* FBSDKLoginKit.framework */,
 				CEC0632B1B276FE5002A28C6 /* ProgressHUD */,
-				CECCDCF31B26796C003DE198 /* FBSDKLoginKit.framework */,
-				CECCDCF11B267942003DE198 /* Bolts.framework */,
-				CECCDCEF1B2678F4003DE198 /* FBSDKCoreKit.framework */,
 				CEE12EED1B26733E0093ABAB /* ParseUI.framework */,
 				CEE12EEB1B2672310093ABAB /* ParseFacebookUtilsV4.framework */,
 				CEE12EE91B2672010093ABAB /* Parse.framework */,
@@ -265,6 +269,8 @@
 				CE735D431AC7D1FD00CD18D8 /* ViewController.swift */,
 				CE3FA5C31B2023E400762DA1 /* LoginViewController.swift */,
 				CEBA34A81B144C7800C3F406 /* AdProfileViewController.swift */,
+				CE7A6BDE1B2FB12C0098775E /* WelcomeViewController.swift */,
+				CE7A6BDC1B2FB0C70098775E /* RegisterViewController.swift */,
 				CEDF38601B0EB94200029A20 /* AdModel.swift */,
 				CEAB27191B0DBD2A00279889 /* AdTableViewCell.swift */,
 				CE735D451AC7D1FD00CD18D8 /* Main.storyboard */,
@@ -502,6 +508,7 @@
 				CE8B5D791AFB223E00DDD336 /* SoundPlayer.swift in Sources */,
 				CE8B5D801AFB223E00DDD336 /* SpringTextView.swift in Sources */,
 				CE735D421AC7D1FD00CD18D8 /* AppDelegate.swift in Sources */,
+				CE7A6BDF1B2FB12C0098775E /* WelcomeViewController.swift in Sources */,
 				CE8B5D721AFB223E00DDD336 /* DesignableView.swift in Sources */,
 				CE8B5D7B1AFB223E00DDD336 /* SpringAnimation.swift in Sources */,
 				CE8B5D7A1AFB223E00DDD336 /* Spring.swift in Sources */,
@@ -509,6 +516,7 @@
 				CEBA34A91B144C7800C3F406 /* AdProfileViewController.swift in Sources */,
 				CE8B5D7F1AFB223E00DDD336 /* SpringTextField.swift in Sources */,
 				CE8B5D6C1AFB223E00DDD336 /* DesignableButton.swift in Sources */,
+				CE7A6BDD1B2FB0C70098775E /* RegisterViewController.swift in Sources */,
 				CE8B5D701AFB223E00DDD336 /* DesignableTextField.swift in Sources */,
 				CE8B5D681AFB223E00DDD336 /* AsyncButton.swift in Sources */,
 				CE8B5D751AFB223E00DDD336 /* KeyboardLayoutConstraint.swift in Sources */,
