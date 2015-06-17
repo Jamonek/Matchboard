@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBox: UISearchBar!
     @IBOutlet weak var mySegmentedControl: UISegmentedControl!
-    @IBOutlet weak var myView: UIView!
+   
     
     
     var adArray: [AdModel] = []
@@ -26,18 +26,40 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       var gameScore = PFObject(className:"TestingMatchBoard")
-        gameScore["votes"] = 1337
-        gameScore["playerName"] = "Chris Moore"
-        gameScore["cheatMode"] = false
-        gameScore.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError?) -> Void in
-            if (success) {
-                println("Saved Successfully")
-            } else {
-                println("Problem Occurred")
-            }
-        }
+        
+//        session.saveInBackgroundWithBlock {
+//            (success: Bool, error: NSError?) -> Void in
+//            if (success) {
+//                println("Success")
+//            } else {
+//                println("Error Occured")
+//                PFUser.logOut()
+//                self.performSegueWithIdentifier("login", sender: self)
+//            }
+       //}
+        
+            
+        
+        
+        //PFUser.logOut()
+//       var gameScore = PFObject(className:"TestingMatchBoard")
+//        gameScore["votes"] = 1337
+//        gameScore["playerName"] = "Chris Moore"
+//        gameScore["cheatMode"] = false
+//        gameScore.saveInBackgroundWithBlock {
+//            (success: Bool, error: NSError?) -> Void in
+//            if (success) {
+//                println("Saved Successfully")
+//            } else {
+//                println("Problem Occurred")
+//                self.performSegueWithIdentifier("login", sender: self)
+//            }
+//        }
+       
+        
+        
+        
+        
         
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: true)
         
@@ -83,6 +105,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        
+        
         if (PFUser.currentUser() == nil) {
             
             self.performSegueWithIdentifier("login", sender: self)
@@ -91,6 +115,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
             self.storyboard?.instantiateViewControllerWithIdentifier("ViewController")
         }
+        
+        var session = PFSession()
+        if (session.sessionToken == nil) {
+            println("Error Occured")
+            PFUser.logOut()
+            self.performSegueWithIdentifier("login", sender: self)
+        }
+
+    
         
     }
     
@@ -110,7 +143,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if(mySegmentedControl.selectedSegmentIndex == 0)
         {
             println("First Segment Selected");
-            myView.hidden = false
+            
             
         }
         else if(mySegmentedControl.selectedSegmentIndex == 1)
@@ -120,7 +153,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         else if(mySegmentedControl.selectedSegmentIndex == 2)
         {
             println("Third Segment Selected");
-            myView.hidden = true
+            
         }
         else if(mySegmentedControl.selectedSegmentIndex == 3)
         {
@@ -196,6 +229,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func adTableViewCellDidTouchCategory(cell: AdTableViewCell, sender: AnyObject) {
         // TODO: Implement Categories
     }
+    
+ 
 
 
 }
