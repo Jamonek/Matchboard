@@ -81,6 +81,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                 showAlert("Phone Login", message: "You must enter a 10-digit US phone number including area code.")
                 return step1()
             }
+            ProgressHUD.show("Signing in...", interaction: false)
             self.editing = false
             let params = ["phoneNumber" : phoneNumberTextField.text]
             PFCloud.callFunctionInBackground("sendCode", withParameters: params) {
@@ -96,6 +97,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                     self.showAlert("Login Error", message: description)
                     return self.step1()
                 }
+                ProgressHUD.showSuccess("Code Sent")
                 return self.step2()
             }
         } else  {
@@ -133,7 +135,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                         self.editing = true
                         return self.step1()
                     }
-                    return self.dismissViewControllerAnimated(true, completion: nil)
+                    self.performSegueWithIdentifier("successSegue", sender: self)
+                    //return self.dismissViewControllerAnimated(true, completion: nil)
                 }
             } else {
                 self.editing = true

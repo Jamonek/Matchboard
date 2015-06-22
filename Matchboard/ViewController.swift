@@ -25,6 +25,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        PFUser.currentUser()
+        
         
         
 //        session.saveInBackgroundWithBlock {
@@ -116,12 +118,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.storyboard?.instantiateViewControllerWithIdentifier("ViewController")
         }
         
-        var session = PFSession()
-        if (session.sessionToken == nil) {
-            println("Error Occured")
-            PFUser.logOut()
-            self.performSegueWithIdentifier("login", sender: self)
-        }
+//        var session = PFSession()
+//        if (session.sessionToken == nil) {
+//            println("Error Occured")
+//            PFUser.logOut()
+//            self.performSegueWithIdentifier("login", sender: self)
+//        }
 
     
         
