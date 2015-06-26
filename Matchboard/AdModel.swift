@@ -16,6 +16,7 @@ struct AdModel {
     var name:String
     var ad:String
     var distance:String
-    var category:String 
+    var category:String
+    var fave:Bool = false
     
 }

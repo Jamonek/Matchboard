@@ -100,6 +100,10 @@ class LoginViewController: UIViewController {
                     println("User Name is: \(userName)")
                     user["username"] = userName
                 } else {println("No username fetched")}
+                if let firstName : NSString = result.valueForKey("first_name") as? NSString {
+                    println("First Name is: \(firstName)")
+                    user["name"] = firstName
+                } else {println("No first name fetched")}
                 if let userEmail : NSString = result.valueForKey("email") as? NSString {
                     println("User Email is: \(userEmail)")
                     user["email"] = userEmail

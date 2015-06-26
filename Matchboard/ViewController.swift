@@ -16,6 +16,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBox: UISearchBar!
     @IBOutlet weak var mySegmentedControl: UISegmentedControl!
+    @IBOutlet weak var favoritesView: UIView!
+    @IBOutlet weak var messagesView: UIView!
+    @IBOutlet weak var categoriesView: UIView!
+    @IBOutlet weak var settingsView: UIView!
    
     
     
@@ -75,7 +79,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         mySegmentedControl.setBackgroundImage(UIImage(named: "SegCtrl-selected"), forState: UIControlState.Selected, barMetrics: UIBarMetrics.Default)
         mySegmentedControl.setBackgroundImage(UIImage(named: "SegCtrl-normal"), forState: UIControlState.Normal, barMetrics: UIBarMetrics.Default)
         
-        var attr = NSDictionary(object: UIFont(name: "Avenir Next", size: 9.0)!, forKey: NSFontAttributeName)
+        var attr = NSDictionary(object: UIFont(name: "Avenir Next", size: 12.0)!, forKey: NSFontAttributeName)
         mySegmentedControl.setTitleTextAttributes(attr, forState: .Normal)
         
         
@@ -85,11 +89,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         searchBox.setImage(UIImage(named: "SearchIcon"), forSearchBarIcon: UISearchBarIcon.Search, state: UIControlState.Normal)
         
         
-        let ad1 = AdModel(profileImage: UIImage(named: "chris"), name: "Jesse", ad: "Looking for another gamer!", distance: "10 miles", category: "Gaming")
-        let ad2 = AdModel(profileImage: UIImage(named: "paul"), name: "Paul", ad: "Need a donor for church clothes.", distance: "12 miles", category: "Community")
-        let ad3 = AdModel(profileImage: UIImage(named: "Dallas"), name: "Dallas", ad: "Looking for more hackers.", distance: "15 miles", category: "Computer")
+        let ad1 = AdModel(profileImage: UIImage(named: "chris"), name: "Jesse", ad: "Looking for another gamer!", distance: "10 miles", category: "Gaming", fave: false)
+        let ad2 = AdModel(profileImage: UIImage(named: "paul"), name: "Paul", ad: "Need a donor for church clothes.", distance: "12 miles", category: "Community", fave: false)
+        let ad3 = AdModel(profileImage: UIImage(named: "Dallas"), name: "Dallas", ad: "Looking for more hackers.", distance: "15 miles", category: "Computer", fave: false)
         
-       adArray = [ad1, ad2, ad3, AdModel(profileImage: UIImage(named: "Profile.png"), name: "Lawrence", ad: "Testing", distance: "10 mile", category: "Paid Service")]
+       adArray = [ad1, ad2, ad3, AdModel(profileImage: UIImage(named: "Profile.png"), name: "Lawrence", ad: "Testing", distance: "10 mile", category: "Paid Service", fave: false)]
       
         self.tableView.reloadData()
         
@@ -144,26 +148,47 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func mySegmentedControlAction(sender: AnyObject) {
         if(mySegmentedControl.selectedSegmentIndex == 0)
         {
-            println("First Segment Selected");
+            println("Fave Segment Selected");
+            favoritesView.hidden = false
+            messagesView.hidden = true
+            categoriesView.hidden = true
+            settingsView.hidden = true
             
             
         }
         else if(mySegmentedControl.selectedSegmentIndex == 1)
         {
-            println("Second Segment Selected");
+            println("Messages Segment Selected");
+            messagesView.hidden = false
+            favoritesView.hidden = true
+            categoriesView.hidden = true
+            settingsView.hidden = true
         }
         else if(mySegmentedControl.selectedSegmentIndex == 2)
         {
-            println("Third Segment Selected");
+            println("Home Segment Selected");
+            favoritesView.hidden = true
+            messagesView.hidden = true
+            categoriesView.hidden = true
+            settingsView.hidden = true
             
         }
         else if(mySegmentedControl.selectedSegmentIndex == 3)
         {
-            println("Fourth Segment Selected")
+            println("Categories Segment Selected")
+            categoriesView.hidden = false
+            favoritesView.hidden = true
+            messagesView.hidden = true
+            settingsView.hidden = true
         }
         else if(mySegmentedControl.selectedSegmentIndex == 4)
         {
-            println("Fifth Segment Selected")
+            println("Settings Segment Selected")
+            settingsView.hidden = false
+            favoritesView.hidden = true
+            messagesView.hidden = true
+            categoriesView.hidden = true
+            
         }
     }
     

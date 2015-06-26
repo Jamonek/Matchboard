@@ -8,86 +8,33 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController, UITextFieldDelegate {
+class WelcomeViewController: UIViewController, UITextViewDelegate, UIAlertViewDelegate {
 
-    @IBOutlet weak var adTextView: UITextField!
+    @IBOutlet weak var adTextView: UITextView!
     
     @IBOutlet weak var charRemainingLabel: UILabel!
+    
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    
+    @IBOutlet weak var label3: UILabel!
+    
+    @IBOutlet weak var label4: UILabel!
+    
+    @IBOutlet weak var textView1: UITextView!
+    @IBOutlet weak var textView2: UITextView!
+    @IBOutlet weak var textView3: UITextView!
+    
+    
     let user = PFUser.currentUser()
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-//        var user =  PFUser.currentUser()
-//        
-//        // -------------------- Load and save user Information -------------------------------------
-//        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
-//        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-//            if ((error) != nil)
-//            {
-//                // Process error
-//                println("Error: \(error)")
-//            }
-//            else
-//            {
-//                if let userName : NSString = result.valueForKey("name") as? NSString {
-//                    println("User Name is: \(userName)")
-//                    user["username"] = userName
-//                } else {println("No username fetched")}
-//                if let userEmail : NSString = result.valueForKey("email") as? NSString {
-//                    println("User Email is: \(userEmail)")
-//                    user["email"] = userEmail
-//                } else  {println("No email address fetched")}
-//                if let userGender : NSString = result.valueForKey("gender") as? NSString {
-//                    println("User Gender is: \(userGender)")
-//                    user["gender"] = userGender
-//                } else {println("No gender fetched") }
-//                
-//                user.saveInBackgroundWithBlock({ (success, error) -> Void in
-//                    if success == false{
-//                        self.displayAlert("Could not Save User Info", error: "Please try again later")
-//                    } else {
-//                        println("User Information has been saved successfully!")
-//                    }
-//                })
-//            }
-//        })
-//        
-//        // ------------------- Load and Save user Profile Picture  -------------------------------
-//        let pictureRequest = FBSDKGraphRequest(graphPath: "me/picture?type=large&redirect=false", parameters: nil)
-//        pictureRequest.startWithCompletionHandler({
-//            (connection, result, error: NSError!) -> Void in
-//            if error == nil {
-//                if let profilePicURL : String  = (result.valueForKey("data")!).valueForKey("url") as? String {
-//                    //println("The profile picture url is: \(profilePicURL)")
-//                    
-//                    let url = NSURL(string: profilePicURL)
-//                    let urlRequest = NSURLRequest(URL: url!)
-//                    NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: {
-//                        (response, data, error) in
-//                        
-//                        let image = UIImage(data: data)
-//                        //self.profilePic.image = image
-//                        println( "Success")
-//                        
-//                        
-//                        // ------------------ save image as png in Parse --------------------
-//                        let imageData = UIImagePNGRepresentation(image)
-//                        let imageFile = PFFile(name: "image.png", data: imageData)
-//                        user["profileImage"] = imageFile
-//                        
-//                        user.saveInBackgroundWithBlock({ (success, error) -> Void in
-//                            if success == false{
-//                                self.displayAlert("Could not Save User Image", error: "Please try again later")
-//                            } else {
-//                                println("ProfileImage has been saved successfully!")
-//                            }
-//                        })
-//                    })
-//                } else { println("No profile pic URL fetched") }
-//            } else {
-//                println("\(error)")
-//            }
-//        })
+
+        adTextView.delegate = self
+    
+        
     }
 
 
@@ -97,14 +44,46 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func nextButtonTapped(sender: AnyObject) {
         println("Next Button Tapped")
+        
+        user["lookingFor"] = adTextView.text
+        
+        user.saveInBackgroundWithBlock({ (success, error) -> Void in
+            if success == false{
+                self.displayAlert("Could not Save Looking For", error: "Please try again later")
+            } else {
+                println("Looking For has been saved successfully!")
+            }
+        })
+        
+        
     }
    
     @IBAction func skipButtonTapped(sender: AnyObject) {
         println("Skip Button Tapped")
+        ProgressHUD.showSuccess("We’ll fill in your profile to say you’re “Just Browsing” and classify it as such. Now have fun browsing!", interaction: true)
+        //displayAlert("Skip It Then!", error: "We’ll fill in your profile to say you’re “Just Browsing” and classify it as such. Now have fun browsing!")
+        self.performSegueWithIdentifier("adSegue", sender: self)
+       
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         view.endEditing(true)
+    }
+    
+    func textViewDidBeginEditing(view: UITextView) {
+        label3.hidden = true
+        label4.hidden = true
+        textView1.hidden = true
+        textView2.hidden = true
+        textView3.hidden = true
+    }
+    
+    func textViewDidEndEditing(view: UITextView) {
+        label3.hidden = false
+        label4.hidden = false
+        textView1.hidden = false
+        textView2.hidden = false
+        textView3.hidden = false
     }
     
     // **************** FUNCTION: Send Error Alert ****************************
@@ -121,7 +100,7 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate {
     
     
     // **************** FUNCTION: Text Remaining ****************************
-    func textView(textView: UITextView!,
+    func textView(textView: UITextField!,
         shouldChangeTextInRange range: NSRange,
         replacementText text: String!) -> Bool{
             var newLength:Int = (textView.text as NSString).length + (text as NSString).length - range.length

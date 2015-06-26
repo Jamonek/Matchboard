@@ -18,6 +18,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var registerButton: DesignableButton!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    
     let imagePicker = UIImagePickerController()
     
     var phoneNumber: String
@@ -73,9 +75,14 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         imagePicker.sourceType = .PhotoLibrary
         
         presentViewController(imagePicker, animated: true, completion: nil)
+        
     }
     
+   
+    
     @IBAction func registerButtonTapped(sender: AnyObject) {
+        
+        
         if phoneNumber == "" {
             if countElements(phoneNumberTextField.text) != 10 {
                 showAlert("Phone Login", message: "You must enter a 10-digit US phone number including area code.")
@@ -111,6 +118,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             showAlert("Code Entry", message: "You must enter the 4 digit code texted to your phone number.")
             }
         }
+        
+        
     }
     
         
@@ -135,6 +144,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                         self.editing = true
                         return self.step1()
                     }
+                    //**************Save Photo & Display Name*************//
+                    self.savePhoto()
+                    self.saveData()
                     self.performSegueWithIdentifier("successSegue", sender: self)
                     //return self.dismissViewControllerAnimated(true, completion: nil)
                 }
@@ -147,12 +159,50 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     
+    
+    
     override func setEditing(editing: Bool, animated: Bool) {
         registerButton.enabled = editing
         phoneNumberTextField.enabled = editing
         if editing {
             phoneNumberTextField.becomeFirstResponder()
         }
+    }
+    
+    
+     //*********************Save Photo***********************//
+    func savePhoto() {
+        
+                var user = PFUser.currentUser()
+               let profilePic = self.imageView.image
+               let imageData = UIImagePNGRepresentation(profilePic)
+                let profileImage = PFFile(name: "image.png", data: imageData)
+                 println("\(profileImage.name)")
+                user["profileImage"] = profileImage
+        
+                user.saveInBackgroundWithBlock({ (success, error) -> Void in
+                    if success == false{
+                        self.displayAlert("Could not Save User Image", error: "Please try again later")
+                    } else {
+                        println("ProfileImage has been saved successfully!")
+                    }
+                })
+        
+    }
+    
+    func saveData() {
+        var user = PFUser.currentUser()
+        let name = self.displayNameTextField.text
+        println("\(name)")
+        user["name"] = name
+        
+        user.saveInBackgroundWithBlock({ (success, error) -> Void in
+            if success == false{
+                self.displayAlert("Could not Save name", error: "Please try again later")
+            } else {
+                println("Display Name has been saved successfully!")
+            }
+        })
     }
     
     
@@ -165,6 +215,19 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         view.endEditing(true)
     }
+    
+    // **************** FUNCTION: Send Error Alert ****************************
+    func displayAlert(title: String, error: String) {
+        // add alert
+        var alert = UIAlertController(title: title, message: error, preferredStyle: UIAlertControllerStyle.Alert)
+        // add action to alert
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }))
+        //show alert
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
     
     //***********************UIImagePickerController Delegates***********//
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
