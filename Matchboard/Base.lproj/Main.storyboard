@@ -1833,7 +1833,6 @@
                                         </variation>
                                         <connections>
                                             <action selector="nextButtonTapped:" destination="0Dc-Iv-A6g" eventType="touchUpInside" id="e7u-Qt-z5Y"/>
-                                            <segue destination="oZ7-be-95O" kind="show" id="7gp-Gy-rFz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djr-1I-Jgy" customClass="DesignableButton" customModule="Matchboard" customModuleProvider="target">
@@ -2315,22 +2314,22 @@
                                                     <exclude reference="oW2-hF-Zw3"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="oLw-d6-3Ub"/>
-                                                    <exclude reference="cuz-Mf-zgg"/>
-                                                    <exclude reference="cJo-8k-SN3"/>
                                                     <exclude reference="ifB-R4-9q2"/>
                                                     <exclude reference="qat-FM-c97"/>
-                                                    <exclude reference="MRS-kd-2Tx"/>
-                                                    <exclude reference="Jpy-XA-YAO"/>
-                                                    <exclude reference="AWj-is-FK9"/>
+                                                    <exclude reference="cJo-8k-SN3"/>
+                                                    <exclude reference="cuz-Mf-zgg"/>
+                                                    <exclude reference="oLw-d6-3Ub"/>
                                                     <exclude reference="8e6-v7-az7"/>
-                                                    <exclude reference="uZ0-Ub-4RY"/>
+                                                    <exclude reference="AWj-is-FK9"/>
+                                                    <exclude reference="Jpy-XA-YAO"/>
+                                                    <exclude reference="MRS-kd-2Tx"/>
                                                     <exclude reference="ota-tg-JSn"/>
+                                                    <exclude reference="uZ0-Ub-4RY"/>
                                                     <exclude reference="ApN-sA-tYw"/>
-                                                    <exclude reference="xqu-GG-j8o"/>
                                                     <exclude reference="o4N-Hh-ZgF"/>
-                                                    <exclude reference="S28-nY-ReG"/>
+                                                    <exclude reference="xqu-GG-j8o"/>
                                                     <exclude reference="Dpb-JI-AAw"/>
+                                                    <exclude reference="S28-nY-ReG"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -2344,22 +2343,22 @@
                                                     <include reference="oW2-hF-Zw3"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="oLw-d6-3Ub"/>
-                                                    <include reference="cuz-Mf-zgg"/>
-                                                    <include reference="cJo-8k-SN3"/>
                                                     <include reference="ifB-R4-9q2"/>
                                                     <include reference="qat-FM-c97"/>
-                                                    <include reference="MRS-kd-2Tx"/>
-                                                    <include reference="Jpy-XA-YAO"/>
-                                                    <include reference="AWj-is-FK9"/>
+                                                    <include reference="cJo-8k-SN3"/>
+                                                    <include reference="cuz-Mf-zgg"/>
+                                                    <include reference="oLw-d6-3Ub"/>
                                                     <include reference="8e6-v7-az7"/>
-                                                    <include reference="uZ0-Ub-4RY"/>
+                                                    <include reference="AWj-is-FK9"/>
+                                                    <include reference="Jpy-XA-YAO"/>
+                                                    <include reference="MRS-kd-2Tx"/>
                                                     <include reference="ota-tg-JSn"/>
+                                                    <include reference="uZ0-Ub-4RY"/>
                                                     <include reference="ApN-sA-tYw"/>
-                                                    <include reference="xqu-GG-j8o"/>
                                                     <exclude reference="o4N-Hh-ZgF"/>
-                                                    <include reference="S28-nY-ReG"/>
+                                                    <include reference="xqu-GG-j8o"/>
                                                     <include reference="Dpb-JI-AAw"/>
+                                                    <include reference="S28-nY-ReG"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -2449,7 +2448,7 @@
                         <viewControllerLayoutGuide type="bottom" id="eRw-3F-Vn2"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cmF-mp-jcC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="B1e-Br-GYd">
@@ -3662,6 +3661,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PrD-0j-7Fa"/>
-        <segue reference="BhO-Ij-NZO"/>
     </inferredMetricsTieBreakers>
 </document>
