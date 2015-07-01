@@ -200,7 +200,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return adArray.count
+        return adArray.count + 1
     }
     
     
