@@ -45,15 +45,27 @@ class WelcomeViewController: UIViewController, UITextViewDelegate, UIAlertViewDe
     @IBAction func nextButtonTapped(sender: AnyObject) {
         println("Next Button Tapped")
         
-        user["lookingFor"] = adTextView.text
-        
-        user.saveInBackgroundWithBlock({ (success, error) -> Void in
-            if success == false{
-                self.displayAlert("Could not Save Looking For", error: "Please try again later")
+        var lookingFor = PFObject(className:"Ad")
+        lookingFor["lookingFor"] = adTextView.text
+        lookingFor["createdBy"] = PFUser.currentUser().username
+        lookingFor.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                println("Looking For has been saved!")
             } else {
-                println("Looking For has been saved successfully!")
+                println("There was a problem saving")
+                self.displayAlert("Could not Save Looking For", error: "Please try again later")
             }
-        })
+        }
+//        user["lookingFor"] = adTextView.text
+//        
+//        user.saveInBackgroundWithBlock({ (success, error) -> Void in
+//            if success == false{
+//                self.displayAlert("Could not Save Looking For", error: "Please try again later")
+//            } else {
+//                println("Looking For has been saved successfully!")
+//            }
+//        })
         
         
     }
