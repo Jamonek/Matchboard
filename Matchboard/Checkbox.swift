@@ -16,7 +16,7 @@ class Checkbox: UIButton {
     
     //bool property 
     var isChecked:Bool = false{
-        didSet{         // Whenever isChaked is updated this didSet will be called
+        didSet{         // Whenever isChecked is updated this didSet will be called
             if isChecked == true{
                 self.setImage(checkedImage, forState: .Normal)
             }else{

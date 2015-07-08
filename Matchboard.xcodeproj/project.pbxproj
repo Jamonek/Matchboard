@@ -21,6 +21,8 @@
 		CE7A6BDB1B2FADFD0098775E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A6BDA1B2FADFD0098775E /* FBSDKCoreKit.framework */; };
 		CE7A6BDD1B2FB0C70098775E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A6BDC1B2FB0C70098775E /* RegisterViewController.swift */; };
 		CE7A6BDF1B2FB12C0098775E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A6BDE1B2FB12C0098775E /* WelcomeViewController.swift */; };
+		CE7C5A0C1B4A27D100CE4AE0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C5A0B1B4A27D100CE4AE0 /* Category.swift */; };
+		CE7C5A0E1B4A283300CE4AE0 /* CategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C5A0D1B4A283300CE4AE0 /* CategoryHeader.swift */; };
 		CE8B5D681AFB223E00DDD336 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4A1AFB223E00DDD336 /* AsyncButton.swift */; };
 		CE8B5D691AFB223E00DDD336 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4B1AFB223E00DDD336 /* AsyncImageView.swift */; };
 		CE8B5D6A1AFB223E00DDD336 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4C1AFB223E00DDD336 /* AutoTextView.swift */; };
@@ -114,6 +116,8 @@
 		CE7A6BDA1B2FADFD0098775E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		CE7A6BDC1B2FB0C70098775E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CE7A6BDE1B2FB12C0098775E /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		CE7C5A0B1B4A27D100CE4AE0 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CE7C5A0D1B4A283300CE4AE0 /* CategoryHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryHeader.swift; sourceTree = "<group>"; };
 		CE8B5D4A1AFB223E00DDD336 /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		CE8B5D4B1AFB223E00DDD336 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		CE8B5D4C1AFB223E00DDD336 /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
@@ -285,8 +289,6 @@
 				CE8B5D491AFB223E00DDD336 /* Spring */,
 				CE735D411AC7D1FD00CD18D8 /* AppDelegate.swift */,
 				CEF7DA7E1B1E2BDE00917B53 /* Matchboard-Bridging-Header.h */,
-				CE92F9BD1B3CE7D700680947 /* Checkbox.swift */,
-				CEDF38601B0EB94200029A20 /* AdModel.swift */,
 				CE3FA5C31B2023E400762DA1 /* LoginViewController.swift */,
 				CE7A6BDC1B2FB0C70098775E /* RegisterViewController.swift */,
 				CE7A6BDE1B2FB12C0098775E /* WelcomeViewController.swift */,
@@ -294,6 +296,7 @@
 				CEF8890D1B447CBA00F39692 /* CategoryTableViewCell.swift */,
 				CE735D431AC7D1FD00CD18D8 /* ViewController.swift */,
 				CEAB27191B0DBD2A00279889 /* AdTableViewCell.swift */,
+				CE7C5A0A1B4A278800CE4AE0 /* Models */,
 				CEBA34A81B144C7800C3F406 /* AdProfileViewController.swift */,
 				CE735D451AC7D1FD00CD18D8 /* Main.storyboard */,
 				CE735D481AC7D1FD00CD18D8 /* Images.xcassets */,
@@ -330,6 +333,17 @@
 				CE735D561AC7D1FE00CD18D8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE7C5A0A1B4A278800CE4AE0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE92F9BD1B3CE7D700680947 /* Checkbox.swift */,
+				CEDF38601B0EB94200029A20 /* AdModel.swift */,
+				CE7C5A0B1B4A27D100CE4AE0 /* Category.swift */,
+				CE7C5A0D1B4A283300CE4AE0 /* CategoryHeader.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		CE8B5D491AFB223E00DDD336 /* Spring */ = {
@@ -555,6 +569,7 @@
 				CEF8890C1B44794E00F39692 /* CategoryViewController.swift in Sources */,
 				CEBA34A91B144C7800C3F406 /* AdProfileViewController.swift in Sources */,
 				CE8B5D7F1AFB223E00DDD336 /* SpringTextField.swift in Sources */,
+				CE7C5A0E1B4A283300CE4AE0 /* CategoryHeader.swift in Sources */,
 				CEB3891C1B2FC9EA00F38492 /* TPKeyboardAvoidingTableView.m in Sources */,
 				CE8B5D6C1AFB223E00DDD336 /* DesignableButton.swift in Sources */,
 				CE7A6BDD1B2FB0C70098775E /* RegisterViewController.swift in Sources */,
@@ -579,6 +594,7 @@
 				CE8B5D811AFB223E00DDD336 /* SpringView.swift in Sources */,
 				CEDF38611B0EB94200029A20 /* AdModel.swift in Sources */,
 				CE8B5D831AFB223E00DDD336 /* TransitionZoom.swift in Sources */,
+				CE7C5A0C1B4A27D100CE4AE0 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

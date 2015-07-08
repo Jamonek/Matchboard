@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var categoriesView: UIView!
     @IBOutlet weak var settingsView: UIView!
    
-    
+    var isFirstTime = true
     
     var adArray: [AdModel] = []
     
@@ -46,26 +46,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
             
         
-        
         //PFUser.logOut()
-//       var gameScore = PFObject(className:"TestingMatchBoard")
-//        gameScore["votes"] = 1337
-//        gameScore["playerName"] = "Chris Moore"
-//        gameScore["cheatMode"] = false
-//        gameScore.saveInBackgroundWithBlock {
-//            (success: Bool, error: NSError?) -> Void in
-//            if (success) {
-//                println("Saved Successfully")
-//            } else {
-//                println("Problem Occurred")
-//                self.performSegueWithIdentifier("login", sender: self)
-//            }
-//        }
        
-        
-        
-        
-        
         
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: true)
         
@@ -100,18 +82,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         println("\(adArray.count)")
      
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    
     
     
     //Check to see if User is logged in; If not, head over to login
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        
         
         if (PFUser.currentUser() == nil) {
             
@@ -122,6 +99,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.storyboard?.instantiateViewControllerWithIdentifier("ViewController")
         }
         
+        //Loading Indicator
+        if isFirstTime {
+            view.showLoading()
+            isFirstTime = false
+        }
+        
 //        var session = PFSession()
 //        if (session.sessionToken == nil) {
 //            println("Error Occured")
@@ -129,10 +112,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //            self.performSegueWithIdentifier("login", sender: self)
 //        }
 
-    
-        
     }
     
+    
+    //Passing Data - PrepareForSegue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showProfile" {
             let adVC: AdProfileViewController = segue.destinationViewController as AdProfileViewController
@@ -145,6 +128,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
+    
     @IBAction func mySegmentedControlAction(sender: AnyObject) {
         if(mySegmentedControl.selectedSegmentIndex == 0)
         {
