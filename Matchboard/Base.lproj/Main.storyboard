@@ -2289,12 +2289,12 @@
                                                     <exclude reference="fGg-Y0-Omb"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="AEF-bp-yK9"/>
-                                                    <exclude reference="OjU-Nq-utH"/>
                                                     <exclude reference="4pZ-Rn-91E"/>
                                                     <exclude reference="A9l-xA-2Di"/>
                                                     <exclude reference="dUF-rz-O5j"/>
                                                     <exclude reference="lQL-cM-hWS"/>
+                                                    <exclude reference="AEF-bp-yK9"/>
+                                                    <exclude reference="OjU-Nq-utH"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -2303,12 +2303,12 @@
                                                     <include reference="fGg-Y0-Omb"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="AEF-bp-yK9"/>
-                                                    <include reference="OjU-Nq-utH"/>
                                                     <include reference="4pZ-Rn-91E"/>
                                                     <include reference="A9l-xA-2Di"/>
                                                     <include reference="dUF-rz-O5j"/>
                                                     <include reference="lQL-cM-hWS"/>
+                                                    <include reference="AEF-bp-yK9"/>
+                                                    <include reference="OjU-Nq-utH"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -2794,16 +2794,24 @@
                                     <rect key="frame" x="114" y="125" width="146" height="33"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="RxR-A9-tWn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="582"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="tOi-aY-aTD"/>
+                                <exclude reference="RxR-A9-tWn"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="tOi-aY-aTD"/>
+                                <include reference="RxR-A9-tWn"/>
                             </mask>
                         </variation>
                     </view>
@@ -2811,12 +2819,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZN-uZ-hKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016.75" y="-440.25"/>
+            <point key="canvasLocation" x="2010.75" y="-483.75"/>
         </scene>
     </scenes>
     <resources>
         <image name="BackArrow" width="13" height="21"/>
         <image name="Background" width="750" height="1334"/>
+        <image name="Background1" width="478" height="779"/>
         <image name="BackgroundOB" width="375" height="667"/>
         <image name="BackgroundPro" width="750" height="1334"/>
         <image name="BlankProfilePhoto" width="125" height="126"/>

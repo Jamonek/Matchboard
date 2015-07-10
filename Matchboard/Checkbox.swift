@@ -2,8 +2,7 @@
 //  Checkbox.swift
 //  CheckBox Alternative Swift
 //
-//  Created by Shweta Choudhary on 5/28/15.
-//  Copyright (c) 2015 IBM. All rights reserved.
+
 //
 
 import UIKit
