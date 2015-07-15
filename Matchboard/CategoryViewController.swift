@@ -11,14 +11,20 @@ import UIKit
 class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CategoryTableViewCellDelegate {
 
      @IBOutlet weak var tableView: UITableView!
-    var expandedSections: NSMutableIndexSet! = nil;
+    //var expandedSections: NSMutableIndexSet! = nil;
+    
+
+    var categoryArray: [String] = []
     
     
     //MARK - Data Source
     //Initialize a data source to be ProductLines
+    
     lazy var categoryHeaders: [CategoryHeader] = {
         return CategoryHeader.categoryHeaders()
         }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +33,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
 //        }
 
         tableView.backgroundColor = UIColor.clearColor()
-        
+
     }
 
     
@@ -43,13 +49,15 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
 //    }
     
     
+    
+    
     //Title of the Section Headers  DONE
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let categoryHeader = categoryHeaders[section]
         return categoryHeader.name
     }
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Header") as CustomHeaderCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Header") as! CustomHeaderCell
         let categoryHeader = categoryHeaders[section]
         cell.categoryHeaderLabel.text = categoryHeader.name
         return cell
@@ -74,16 +82,49 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     //What goes in each Table View Cell  DONE
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: CategoryTableViewCell = tableView.dequeueReusableCellWithIdentifier("Category") as CategoryTableViewCell
+        var cell: CategoryTableViewCell = tableView.dequeueReusableCellWithIdentifier("Category") as! CategoryTableViewCell
         
         let categoryHeader = categoryHeaders[indexPath.section]
         let category = categoryHeader.category[indexPath.row]
         cell.categoryLabel.text = category.title
+        cell.checkbox.isChecked = false
                
         cell.delegate = self
+    
         
         return cell
     }
+    
+    
+    
+    
+    
+//    //??????
+//    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+//        var cell: CategoryTableViewCell = tableView.dequeueReusableCellWithIdentifier("Category") as CategoryTableViewCell
+//        cell.selectionStyle = UITableViewCellSelectionStyle.None
+//        return indexPath == tableView.indexPathForSelectedRow() ? nil : indexPath
+//    }
+    
+    
+    //?????????
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //println("Selected")
+        var cell: CategoryTableViewCell = tableView.dequeueReusableCellWithIdentifier("Category") as! CategoryTableViewCell
+        let categoryHeader = categoryHeaders[indexPath.section]
+        let category = categoryHeader.category[indexPath.row]
+        //cell.checkbox.isChecked = true
+        println("\(category.title) Selected")
+        categoryArray.append(category.title)
+        println(categoryArray)
+    }
+    
+    
+    
+    
+    
+    
+    
     
     //Display of the cells DONE
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -101,10 +142,21 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     //Done Button
     @IBAction func doneButtonTapped(sender: AnyObject) {
+        
+        
     }
     
     func categoryTableViewCellDidTouchCheckbox(cell: CategoryTableViewCell, sender: AnyObject) {
         // TODO: Implement Checkbox
+       var cell: CategoryTableViewCell = tableView.dequeueReusableCellWithIdentifier("Category") as! CategoryTableViewCell
+        var catArray: [String] = []
+        
+        if cell.checkbox.isChecked == false {
+            catArray.append(cell.categoryLabel.text!)
+        }
+       
+        println("\(cell.categoryArray)")
+        println("Delegate implemented")
         
         
         

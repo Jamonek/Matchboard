@@ -84,7 +84,7 @@ class LoginViewController: UIViewController {
     }
     
     func collectFacebook() {
-        var user =  PFUser.currentUser()
+        var user =  PFUser.currentUser()!
         
         // -------------------- Load and save user Information -------------------------------------
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
@@ -96,7 +96,7 @@ class LoginViewController: UIViewController {
             }
             else
             {
-                if let userName : NSString = result.valueForKey("name") as? NSString {
+                if let userName: NSString = result.valueForKey("name") as? NSString {
                     println("User Name is: \(userName)")
                     user["username"] = userName
                 } else {println("No username fetched")}

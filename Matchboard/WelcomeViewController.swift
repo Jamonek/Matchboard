@@ -47,7 +47,7 @@ class WelcomeViewController: UIViewController, UITextViewDelegate, UIAlertViewDe
         
         var lookingFor = PFObject(className:"Ad")
         lookingFor["lookingFor"] = adTextView.text
-        lookingFor["createdBy"] = PFUser.currentUser().username
+        lookingFor["createdBy"] = PFUser.currentUser()!.username
         lookingFor.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {
@@ -78,7 +78,7 @@ class WelcomeViewController: UIViewController, UITextViewDelegate, UIAlertViewDe
        
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         view.endEditing(true)
     }
     
@@ -113,7 +113,7 @@ class WelcomeViewController: UIViewController, UITextViewDelegate, UIAlertViewDe
     
     // **************** FUNCTION: Text Remaining ****************************
     func textView(textView: UITextField!,
-        shouldChangeTextInRange range: NSRange,
+         shouldChangeCharactersInRange range: NSRange,
         replacementText text: String!) -> Bool{
             var newLength:Int = (textView.text as NSString).length + (text as NSString).length - range.length
             var remainingChar:Int = 100 - newLength

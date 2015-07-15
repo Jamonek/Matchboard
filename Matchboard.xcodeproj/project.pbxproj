@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		22BB68C70F9EBC16041B3597 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C81E73C1811BA9BFE83D6848 /* libPods.a */; };
 		CE3FA5C41B2023E400762DA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3FA5C31B2023E400762DA1 /* LoginViewController.swift */; };
+		CE672B051B54D45E0080A9E0 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE672B041B54D45E0080A9E0 /* Ad.swift */; };
 		CE735D421AC7D1FD00CD18D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735D411AC7D1FD00CD18D8 /* AppDelegate.swift */; };
 		CE735D441AC7D1FD00CD18D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE735D431AC7D1FD00CD18D8 /* ViewController.swift */; };
 		CE735D471AC7D1FD00CD18D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE735D451AC7D1FD00CD18D8 /* Main.storyboard */; };
@@ -23,35 +24,6 @@
 		CE7A6BDF1B2FB12C0098775E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A6BDE1B2FB12C0098775E /* WelcomeViewController.swift */; };
 		CE7C5A0C1B4A27D100CE4AE0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C5A0B1B4A27D100CE4AE0 /* Category.swift */; };
 		CE7C5A0E1B4A283300CE4AE0 /* CategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C5A0D1B4A283300CE4AE0 /* CategoryHeader.swift */; };
-		CE8B5D681AFB223E00DDD336 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4A1AFB223E00DDD336 /* AsyncButton.swift */; };
-		CE8B5D691AFB223E00DDD336 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4B1AFB223E00DDD336 /* AsyncImageView.swift */; };
-		CE8B5D6A1AFB223E00DDD336 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4C1AFB223E00DDD336 /* AutoTextView.swift */; };
-		CE8B5D6B1AFB223E00DDD336 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4D1AFB223E00DDD336 /* BlurView.swift */; };
-		CE8B5D6C1AFB223E00DDD336 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4E1AFB223E00DDD336 /* DesignableButton.swift */; };
-		CE8B5D6D1AFB223E00DDD336 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D4F1AFB223E00DDD336 /* DesignableImageView.swift */; };
-		CE8B5D6E1AFB223E00DDD336 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D501AFB223E00DDD336 /* DesignableLabel.swift */; };
-		CE8B5D6F1AFB223E00DDD336 /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D511AFB223E00DDD336 /* DesignableTabBarController.swift */; };
-		CE8B5D701AFB223E00DDD336 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D521AFB223E00DDD336 /* DesignableTextField.swift */; };
-		CE8B5D711AFB223E00DDD336 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D531AFB223E00DDD336 /* DesignableTextView.swift */; };
-		CE8B5D721AFB223E00DDD336 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D541AFB223E00DDD336 /* DesignableView.swift */; };
-		CE8B5D731AFB223E00DDD336 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D551AFB223E00DDD336 /* ImageLoader.swift */; };
-		CE8B5D741AFB223E00DDD336 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE8B5D561AFB223E00DDD336 /* Info.plist */; };
-		CE8B5D751AFB223E00DDD336 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D571AFB223E00DDD336 /* KeyboardLayoutConstraint.swift */; };
-		CE8B5D761AFB223E00DDD336 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D581AFB223E00DDD336 /* LoadingView.swift */; };
-		CE8B5D771AFB223E00DDD336 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8B5D591AFB223E00DDD336 /* LoadingView.xib */; };
-		CE8B5D781AFB223E00DDD336 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D5A1AFB223E00DDD336 /* Misc.swift */; };
-		CE8B5D791AFB223E00DDD336 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D5B1AFB223E00DDD336 /* SoundPlayer.swift */; };
-		CE8B5D7A1AFB223E00DDD336 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D5D1AFB223E00DDD336 /* Spring.swift */; };
-		CE8B5D7B1AFB223E00DDD336 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D5E1AFB223E00DDD336 /* SpringAnimation.swift */; };
-		CE8B5D7C1AFB223E00DDD336 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D5F1AFB223E00DDD336 /* SpringButton.swift */; };
-		CE8B5D7D1AFB223E00DDD336 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D601AFB223E00DDD336 /* SpringImageView.swift */; };
-		CE8B5D7E1AFB223E00DDD336 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D611AFB223E00DDD336 /* SpringLabel.swift */; };
-		CE8B5D7F1AFB223E00DDD336 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D621AFB223E00DDD336 /* SpringTextField.swift */; };
-		CE8B5D801AFB223E00DDD336 /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D631AFB223E00DDD336 /* SpringTextView.swift */; };
-		CE8B5D811AFB223E00DDD336 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D641AFB223E00DDD336 /* SpringView.swift */; };
-		CE8B5D821AFB223E00DDD336 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D651AFB223E00DDD336 /* TransitionManager.swift */; };
-		CE8B5D831AFB223E00DDD336 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D661AFB223E00DDD336 /* TransitionZoom.swift */; };
-		CE8B5D841AFB223E00DDD336 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8B5D671AFB223E00DDD336 /* UnwindSegue.swift */; };
 		CE92F9BE1B3CE7D700680947 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92F9BD1B3CE7D700680947 /* Checkbox.swift */; };
 		CEAB271A1B0DBD2A00279889 /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB27191B0DBD2A00279889 /* AdTableViewCell.swift */; };
 		CEAB3E121B4DE71900197E85 /* CustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3E111B4DE71900197E85 /* CustomHeaderCell.swift */; };
@@ -75,6 +47,35 @@
 		CEC14CDD1B1E2643009555A0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC14CDC1B1E2643009555A0 /* libsqlite3.dylib */; };
 		CEC14CDF1B1E264E009555A0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC14CDE1B1E264E009555A0 /* Accounts.framework */; };
 		CEC14CE11B1E265A009555A0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC14CE01B1E265A009555A0 /* Social.framework */; };
+		CEC63FCB1B56052300B65C21 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FAD1B56052300B65C21 /* AsyncButton.swift */; };
+		CEC63FCC1B56052300B65C21 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FAE1B56052300B65C21 /* AsyncImageView.swift */; };
+		CEC63FCD1B56052300B65C21 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FAF1B56052300B65C21 /* AutoTextView.swift */; };
+		CEC63FCE1B56052300B65C21 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FB01B56052300B65C21 /* BlurView.swift */; };
+		CEC63FCF1B56052300B65C21 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FB11B56052300B65C21 /* DesignableButton.swift */; };
+		CEC63FD01B56052300B65C21 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FB21B56052300B65C21 /* DesignableImageView.swift */; };
+		CEC63FD11B56052300B65C21 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FB31B56052300B65C21 /* DesignableLabel.swift */; };
+		CEC63FD21B56052300B65C21 /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FB41B56052300B65C21 /* DesignableTabBarController.swift */; };
+		CEC63FD31B56052300B65C21 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FB51B56052300B65C21 /* DesignableTextField.swift */; };
+		CEC63FD41B56052300B65C21 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FB61B56052300B65C21 /* DesignableTextView.swift */; };
+		CEC63FD51B56052300B65C21 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FB71B56052300B65C21 /* DesignableView.swift */; };
+		CEC63FD61B56052300B65C21 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FB81B56052300B65C21 /* ImageLoader.swift */; };
+		CEC63FD71B56052300B65C21 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEC63FB91B56052300B65C21 /* Info.plist */; };
+		CEC63FD81B56052300B65C21 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FBA1B56052300B65C21 /* KeyboardLayoutConstraint.swift */; };
+		CEC63FD91B56052300B65C21 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FBB1B56052300B65C21 /* LoadingView.swift */; };
+		CEC63FDA1B56052300B65C21 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC63FBC1B56052300B65C21 /* LoadingView.xib */; };
+		CEC63FDB1B56052300B65C21 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FBD1B56052300B65C21 /* Misc.swift */; };
+		CEC63FDC1B56052300B65C21 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FBE1B56052300B65C21 /* SoundPlayer.swift */; };
+		CEC63FDD1B56052300B65C21 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FC01B56052300B65C21 /* Spring.swift */; };
+		CEC63FDE1B56052300B65C21 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FC11B56052300B65C21 /* SpringAnimation.swift */; };
+		CEC63FDF1B56052300B65C21 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FC21B56052300B65C21 /* SpringButton.swift */; };
+		CEC63FE01B56052300B65C21 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FC31B56052300B65C21 /* SpringImageView.swift */; };
+		CEC63FE11B56052300B65C21 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FC41B56052300B65C21 /* SpringLabel.swift */; };
+		CEC63FE21B56052300B65C21 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FC51B56052300B65C21 /* SpringTextField.swift */; };
+		CEC63FE31B56052300B65C21 /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FC61B56052300B65C21 /* SpringTextView.swift */; };
+		CEC63FE41B56052300B65C21 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FC71B56052300B65C21 /* SpringView.swift */; };
+		CEC63FE51B56052300B65C21 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FC81B56052300B65C21 /* TransitionManager.swift */; };
+		CEC63FE61B56052300B65C21 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FC91B56052300B65C21 /* TransitionZoom.swift */; };
+		CEC63FE71B56052300B65C21 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC63FCA1B56052300B65C21 /* UnwindSegue.swift */; };
 		CEC948DC1AD7715C000E95F2 /* Nav Bar iphone 5.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC948D91AD7715C000E95F2 /* Nav Bar iphone 5.png */; };
 		CEC948DD1AD7715C000E95F2 /* Nav Bar iphone 6 Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC948DA1AD7715C000E95F2 /* Nav Bar iphone 6 Plus.png */; };
 		CEC948DE1AD7715C000E95F2 /* Nav Bar iphone 6.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC948DB1AD7715C000E95F2 /* Nav Bar iphone 6.png */; };
@@ -101,6 +102,7 @@
 		C81E73C1811BA9BFE83D6848 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AE21A3A78E4F418EDC1658 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CE3FA5C31B2023E400762DA1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE672B041B54D45E0080A9E0 /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
 		CE735D3C1AC7D1FD00CD18D8 /* Matchboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE735D401AC7D1FD00CD18D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE735D411AC7D1FD00CD18D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,36 +121,6 @@
 		CE7A6BDE1B2FB12C0098775E /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CE7C5A0B1B4A27D100CE4AE0 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CE7C5A0D1B4A283300CE4AE0 /* CategoryHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryHeader.swift; sourceTree = "<group>"; };
-		CE8B5D4A1AFB223E00DDD336 /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
-		CE8B5D4B1AFB223E00DDD336 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
-		CE8B5D4C1AFB223E00DDD336 /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
-		CE8B5D4D1AFB223E00DDD336 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
-		CE8B5D4E1AFB223E00DDD336 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
-		CE8B5D4F1AFB223E00DDD336 /* DesignableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
-		CE8B5D501AFB223E00DDD336 /* DesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
-		CE8B5D511AFB223E00DDD336 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTabBarController.swift; sourceTree = "<group>"; };
-		CE8B5D521AFB223E00DDD336 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
-		CE8B5D531AFB223E00DDD336 /* DesignableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextView.swift; sourceTree = "<group>"; };
-		CE8B5D541AFB223E00DDD336 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
-		CE8B5D551AFB223E00DDD336 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		CE8B5D561AFB223E00DDD336 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE8B5D571AFB223E00DDD336 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
-		CE8B5D581AFB223E00DDD336 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		CE8B5D591AFB223E00DDD336 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
-		CE8B5D5A1AFB223E00DDD336 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
-		CE8B5D5B1AFB223E00DDD336 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
-		CE8B5D5C1AFB223E00DDD336 /* Spring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spring.h; sourceTree = "<group>"; };
-		CE8B5D5D1AFB223E00DDD336 /* Spring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spring.swift; sourceTree = "<group>"; };
-		CE8B5D5E1AFB223E00DDD336 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
-		CE8B5D5F1AFB223E00DDD336 /* SpringButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringButton.swift; sourceTree = "<group>"; };
-		CE8B5D601AFB223E00DDD336 /* SpringImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringImageView.swift; sourceTree = "<group>"; };
-		CE8B5D611AFB223E00DDD336 /* SpringLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringLabel.swift; sourceTree = "<group>"; };
-		CE8B5D621AFB223E00DDD336 /* SpringTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextField.swift; sourceTree = "<group>"; };
-		CE8B5D631AFB223E00DDD336 /* SpringTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextView.swift; sourceTree = "<group>"; };
-		CE8B5D641AFB223E00DDD336 /* SpringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringView.swift; sourceTree = "<group>"; };
-		CE8B5D651AFB223E00DDD336 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
-		CE8B5D661AFB223E00DDD336 /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
-		CE8B5D671AFB223E00DDD336 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		CE92F9BD1B3CE7D700680947 /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		CEAB27191B0DBD2A00279889 /* AdTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 		CEAB3E111B4DE71900197E85 /* CustomHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeaderCell.swift; sourceTree = "<group>"; };
@@ -177,6 +149,36 @@
 		CEC14CDC1B1E2643009555A0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CEC14CDE1B1E264E009555A0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		CEC14CE01B1E265A009555A0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CEC63FAD1B56052300B65C21 /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
+		CEC63FAE1B56052300B65C21 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		CEC63FAF1B56052300B65C21 /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
+		CEC63FB01B56052300B65C21 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		CEC63FB11B56052300B65C21 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		CEC63FB21B56052300B65C21 /* DesignableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
+		CEC63FB31B56052300B65C21 /* DesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
+		CEC63FB41B56052300B65C21 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTabBarController.swift; sourceTree = "<group>"; };
+		CEC63FB51B56052300B65C21 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		CEC63FB61B56052300B65C21 /* DesignableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextView.swift; sourceTree = "<group>"; };
+		CEC63FB71B56052300B65C21 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		CEC63FB81B56052300B65C21 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		CEC63FB91B56052300B65C21 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC63FBA1B56052300B65C21 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		CEC63FBB1B56052300B65C21 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		CEC63FBC1B56052300B65C21 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		CEC63FBD1B56052300B65C21 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		CEC63FBE1B56052300B65C21 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		CEC63FBF1B56052300B65C21 /* Spring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spring.h; sourceTree = "<group>"; };
+		CEC63FC01B56052300B65C21 /* Spring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spring.swift; sourceTree = "<group>"; };
+		CEC63FC11B56052300B65C21 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		CEC63FC21B56052300B65C21 /* SpringButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringButton.swift; sourceTree = "<group>"; };
+		CEC63FC31B56052300B65C21 /* SpringImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringImageView.swift; sourceTree = "<group>"; };
+		CEC63FC41B56052300B65C21 /* SpringLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringLabel.swift; sourceTree = "<group>"; };
+		CEC63FC51B56052300B65C21 /* SpringTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextField.swift; sourceTree = "<group>"; };
+		CEC63FC61B56052300B65C21 /* SpringTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextView.swift; sourceTree = "<group>"; };
+		CEC63FC71B56052300B65C21 /* SpringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringView.swift; sourceTree = "<group>"; };
+		CEC63FC81B56052300B65C21 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		CEC63FC91B56052300B65C21 /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
+		CEC63FCA1B56052300B65C21 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		CEC948D91AD7715C000E95F2 /* Nav Bar iphone 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav Bar iphone 5.png"; sourceTree = "<group>"; };
 		CEC948DA1AD7715C000E95F2 /* Nav Bar iphone 6 Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav Bar iphone 6 Plus.png"; sourceTree = "<group>"; };
 		CEC948DB1AD7715C000E95F2 /* Nav Bar iphone 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav Bar iphone 6.png"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 		CE735D3E1AC7D1FD00CD18D8 /* Matchboard */ = {
 			isa = PBXGroup;
 			children = (
+				CEC63FAC1B56052300B65C21 /* Spring */,
 				CEB389111B2FC9EA00F38492 /* TPKeyboardAvoiding */,
 				CE7A6BDA1B2FADFD0098775E /* FBSDKCoreKit.framework */,
 				CE7A6BD81B2FADEC0098775E /* Bolts.framework */,
@@ -288,7 +291,6 @@
 				CEC14CCC1B1E25B5009555A0 /* CoreGraphics.framework */,
 				CEC14CCA1B1E25A7009555A0 /* CFNetwork.framework */,
 				CEC14CC81B1E259B009555A0 /* AudioToolbox.framework */,
-				CE8B5D491AFB223E00DDD336 /* Spring */,
 				CE735D411AC7D1FD00CD18D8 /* AppDelegate.swift */,
 				CEF7DA7E1B1E2BDE00917B53 /* Matchboard-Bridging-Header.h */,
 				CE3FA5C31B2023E400762DA1 /* LoginViewController.swift */,
@@ -343,47 +345,11 @@
 			children = (
 				CE92F9BD1B3CE7D700680947 /* Checkbox.swift */,
 				CEDF38601B0EB94200029A20 /* AdModel.swift */,
+				CE672B041B54D45E0080A9E0 /* Ad.swift */,
 				CE7C5A0B1B4A27D100CE4AE0 /* Category.swift */,
 				CE7C5A0D1B4A283300CE4AE0 /* CategoryHeader.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		CE8B5D491AFB223E00DDD336 /* Spring */ = {
-			isa = PBXGroup;
-			children = (
-				CE8B5D4A1AFB223E00DDD336 /* AsyncButton.swift */,
-				CE8B5D4B1AFB223E00DDD336 /* AsyncImageView.swift */,
-				CE8B5D4C1AFB223E00DDD336 /* AutoTextView.swift */,
-				CE8B5D4D1AFB223E00DDD336 /* BlurView.swift */,
-				CE8B5D4E1AFB223E00DDD336 /* DesignableButton.swift */,
-				CE8B5D4F1AFB223E00DDD336 /* DesignableImageView.swift */,
-				CE8B5D501AFB223E00DDD336 /* DesignableLabel.swift */,
-				CE8B5D511AFB223E00DDD336 /* DesignableTabBarController.swift */,
-				CE8B5D521AFB223E00DDD336 /* DesignableTextField.swift */,
-				CE8B5D531AFB223E00DDD336 /* DesignableTextView.swift */,
-				CE8B5D541AFB223E00DDD336 /* DesignableView.swift */,
-				CE8B5D551AFB223E00DDD336 /* ImageLoader.swift */,
-				CE8B5D561AFB223E00DDD336 /* Info.plist */,
-				CE8B5D571AFB223E00DDD336 /* KeyboardLayoutConstraint.swift */,
-				CE8B5D581AFB223E00DDD336 /* LoadingView.swift */,
-				CE8B5D591AFB223E00DDD336 /* LoadingView.xib */,
-				CE8B5D5A1AFB223E00DDD336 /* Misc.swift */,
-				CE8B5D5B1AFB223E00DDD336 /* SoundPlayer.swift */,
-				CE8B5D5C1AFB223E00DDD336 /* Spring.h */,
-				CE8B5D5D1AFB223E00DDD336 /* Spring.swift */,
-				CE8B5D5E1AFB223E00DDD336 /* SpringAnimation.swift */,
-				CE8B5D5F1AFB223E00DDD336 /* SpringButton.swift */,
-				CE8B5D601AFB223E00DDD336 /* SpringImageView.swift */,
-				CE8B5D611AFB223E00DDD336 /* SpringLabel.swift */,
-				CE8B5D621AFB223E00DDD336 /* SpringTextField.swift */,
-				CE8B5D631AFB223E00DDD336 /* SpringTextView.swift */,
-				CE8B5D641AFB223E00DDD336 /* SpringView.swift */,
-				CE8B5D651AFB223E00DDD336 /* TransitionManager.swift */,
-				CE8B5D661AFB223E00DDD336 /* TransitionZoom.swift */,
-				CE8B5D671AFB223E00DDD336 /* UnwindSegue.swift */,
-			);
-			path = Spring;
 			sourceTree = "<group>";
 		};
 		CEB389111B2FC9EA00F38492 /* TPKeyboardAvoiding */ = {
@@ -409,6 +375,43 @@
 				CEC0632E1B276FE5002A28C6 /* ProgressHUD.m */,
 			);
 			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		CEC63FAC1B56052300B65C21 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				CEC63FAD1B56052300B65C21 /* AsyncButton.swift */,
+				CEC63FAE1B56052300B65C21 /* AsyncImageView.swift */,
+				CEC63FAF1B56052300B65C21 /* AutoTextView.swift */,
+				CEC63FB01B56052300B65C21 /* BlurView.swift */,
+				CEC63FB11B56052300B65C21 /* DesignableButton.swift */,
+				CEC63FB21B56052300B65C21 /* DesignableImageView.swift */,
+				CEC63FB31B56052300B65C21 /* DesignableLabel.swift */,
+				CEC63FB41B56052300B65C21 /* DesignableTabBarController.swift */,
+				CEC63FB51B56052300B65C21 /* DesignableTextField.swift */,
+				CEC63FB61B56052300B65C21 /* DesignableTextView.swift */,
+				CEC63FB71B56052300B65C21 /* DesignableView.swift */,
+				CEC63FB81B56052300B65C21 /* ImageLoader.swift */,
+				CEC63FB91B56052300B65C21 /* Info.plist */,
+				CEC63FBA1B56052300B65C21 /* KeyboardLayoutConstraint.swift */,
+				CEC63FBB1B56052300B65C21 /* LoadingView.swift */,
+				CEC63FBC1B56052300B65C21 /* LoadingView.xib */,
+				CEC63FBD1B56052300B65C21 /* Misc.swift */,
+				CEC63FBE1B56052300B65C21 /* SoundPlayer.swift */,
+				CEC63FBF1B56052300B65C21 /* Spring.h */,
+				CEC63FC01B56052300B65C21 /* Spring.swift */,
+				CEC63FC11B56052300B65C21 /* SpringAnimation.swift */,
+				CEC63FC21B56052300B65C21 /* SpringButton.swift */,
+				CEC63FC31B56052300B65C21 /* SpringImageView.swift */,
+				CEC63FC41B56052300B65C21 /* SpringLabel.swift */,
+				CEC63FC51B56052300B65C21 /* SpringTextField.swift */,
+				CEC63FC61B56052300B65C21 /* SpringTextView.swift */,
+				CEC63FC71B56052300B65C21 /* SpringView.swift */,
+				CEC63FC81B56052300B65C21 /* TransitionManager.swift */,
+				CEC63FC91B56052300B65C21 /* TransitionZoom.swift */,
+				CEC63FCA1B56052300B65C21 /* UnwindSegue.swift */,
+			);
+			path = Spring;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,16 +496,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8B5D741AFB223E00DDD336 /* Info.plist in Resources */,
 				CEC948DC1AD7715C000E95F2 /* Nav Bar iphone 5.png in Resources */,
 				CEC948DD1AD7715C000E95F2 /* Nav Bar iphone 6 Plus.png in Resources */,
+				CEC63FD71B56052300B65C21 /* Info.plist in Resources */,
 				CE735D621AC7D29800CD18D8 /* splash.png in Resources */,
 				CEC948DE1AD7715C000E95F2 /* Nav Bar iphone 6.png in Resources */,
 				CE735D471AC7D1FD00CD18D8 /* Main.storyboard in Resources */,
-				CE8B5D771AFB223E00DDD336 /* LoadingView.xib in Resources */,
 				CE735D4C1AC7D1FD00CD18D8 /* LaunchScreen.xib in Resources */,
 				CEC0632F1B276FE5002A28C6 /* ProgressHUD.bundle in Resources */,
 				CE735D491AC7D1FD00CD18D8 /* Images.xcassets in Resources */,
+				CEC63FDA1B56052300B65C21 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,51 +556,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8B5D7E1AFB223E00DDD336 /* SpringLabel.swift in Sources */,
-				CE8B5D731AFB223E00DDD336 /* ImageLoader.swift in Sources */,
-				CE8B5D781AFB223E00DDD336 /* Misc.swift in Sources */,
-				CE8B5D6D1AFB223E00DDD336 /* DesignableImageView.swift in Sources */,
-				CE8B5D7D1AFB223E00DDD336 /* SpringImageView.swift in Sources */,
+				CEC63FD01B56052300B65C21 /* DesignableImageView.swift in Sources */,
 				CE735D441AC7D1FD00CD18D8 /* ViewController.swift in Sources */,
-				CE8B5D791AFB223E00DDD336 /* SoundPlayer.swift in Sources */,
-				CE8B5D801AFB223E00DDD336 /* SpringTextView.swift in Sources */,
+				CEC63FE31B56052300B65C21 /* SpringTextView.swift in Sources */,
+				CEC63FD81B56052300B65C21 /* KeyboardLayoutConstraint.swift in Sources */,
 				CEB3891A1B2FC9EA00F38492 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				CE735D421AC7D1FD00CD18D8 /* AppDelegate.swift in Sources */,
+				CEC63FE51B56052300B65C21 /* TransitionManager.swift in Sources */,
 				CE7A6BDF1B2FB12C0098775E /* WelcomeViewController.swift in Sources */,
-				CE8B5D721AFB223E00DDD336 /* DesignableView.swift in Sources */,
-				CE8B5D7B1AFB223E00DDD336 /* SpringAnimation.swift in Sources */,
-				CE8B5D7A1AFB223E00DDD336 /* Spring.swift in Sources */,
-				CE8B5D761AFB223E00DDD336 /* LoadingView.swift in Sources */,
+				CEC63FE21B56052300B65C21 /* SpringTextField.swift in Sources */,
+				CE672B051B54D45E0080A9E0 /* Ad.swift in Sources */,
+				CEC63FD61B56052300B65C21 /* ImageLoader.swift in Sources */,
+				CEC63FD21B56052300B65C21 /* DesignableTabBarController.swift in Sources */,
+				CEC63FD51B56052300B65C21 /* DesignableView.swift in Sources */,
+				CEC63FCC1B56052300B65C21 /* AsyncImageView.swift in Sources */,
+				CEC63FDF1B56052300B65C21 /* SpringButton.swift in Sources */,
+				CEC63FD31B56052300B65C21 /* DesignableTextField.swift in Sources */,
 				CEAB3E121B4DE71900197E85 /* CustomHeaderCell.swift in Sources */,
 				CEB3891B1B2FC9EA00F38492 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				CEC63FE41B56052300B65C21 /* SpringView.swift in Sources */,
+				CEC63FE71B56052300B65C21 /* UnwindSegue.swift in Sources */,
+				CEC63FE61B56052300B65C21 /* TransitionZoom.swift in Sources */,
 				CEF8890C1B44794E00F39692 /* CategoryViewController.swift in Sources */,
+				CEC63FCB1B56052300B65C21 /* AsyncButton.swift in Sources */,
+				CEC63FE01B56052300B65C21 /* SpringImageView.swift in Sources */,
 				CEBA34A91B144C7800C3F406 /* AdProfileViewController.swift in Sources */,
-				CE8B5D7F1AFB223E00DDD336 /* SpringTextField.swift in Sources */,
+				CEC63FDE1B56052300B65C21 /* SpringAnimation.swift in Sources */,
+				CEC63FE11B56052300B65C21 /* SpringLabel.swift in Sources */,
 				CE7C5A0E1B4A283300CE4AE0 /* CategoryHeader.swift in Sources */,
+				CEC63FDB1B56052300B65C21 /* Misc.swift in Sources */,
 				CEB3891C1B2FC9EA00F38492 /* TPKeyboardAvoidingTableView.m in Sources */,
-				CE8B5D6C1AFB223E00DDD336 /* DesignableButton.swift in Sources */,
+				CEC63FCF1B56052300B65C21 /* DesignableButton.swift in Sources */,
 				CE7A6BDD1B2FB0C70098775E /* RegisterViewController.swift in Sources */,
-				CE8B5D701AFB223E00DDD336 /* DesignableTextField.swift in Sources */,
-				CE8B5D681AFB223E00DDD336 /* AsyncButton.swift in Sources */,
-				CE8B5D751AFB223E00DDD336 /* KeyboardLayoutConstraint.swift in Sources */,
-				CE8B5D7C1AFB223E00DDD336 /* SpringButton.swift in Sources */,
-				CE8B5D691AFB223E00DDD336 /* AsyncImageView.swift in Sources */,
+				CEC63FDC1B56052300B65C21 /* SoundPlayer.swift in Sources */,
+				CEC63FD91B56052300B65C21 /* LoadingView.swift in Sources */,
+				CEC63FCD1B56052300B65C21 /* AutoTextView.swift in Sources */,
 				CE3FA5C41B2023E400762DA1 /* LoginViewController.swift in Sources */,
 				CEC063301B276FE5002A28C6 /* ProgressHUD.m in Sources */,
-				CE8B5D6F1AFB223E00DDD336 /* DesignableTabBarController.swift in Sources */,
+				CEC63FCE1B56052300B65C21 /* BlurView.swift in Sources */,
 				CEB3891D1B2FC9EA00F38492 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				CEF8890E1B447CBA00F39692 /* CategoryTableViewCell.swift in Sources */,
-				CE8B5D6A1AFB223E00DDD336 /* AutoTextView.swift in Sources */,
 				CE92F9BE1B3CE7D700680947 /* Checkbox.swift in Sources */,
-				CE8B5D711AFB223E00DDD336 /* DesignableTextView.swift in Sources */,
-				CE8B5D6E1AFB223E00DDD336 /* DesignableLabel.swift in Sources */,
 				CEAB271A1B0DBD2A00279889 /* AdTableViewCell.swift in Sources */,
-				CE8B5D841AFB223E00DDD336 /* UnwindSegue.swift in Sources */,
-				CE8B5D821AFB223E00DDD336 /* TransitionManager.swift in Sources */,
-				CE8B5D6B1AFB223E00DDD336 /* BlurView.swift in Sources */,
-				CE8B5D811AFB223E00DDD336 /* SpringView.swift in Sources */,
 				CEDF38611B0EB94200029A20 /* AdModel.swift in Sources */,
-				CE8B5D831AFB223E00DDD336 /* TransitionZoom.swift in Sources */,
+				CEC63FDD1B56052300B65C21 /* Spring.swift in Sources */,
+				CEC63FD41B56052300B65C21 /* DesignableTextView.swift in Sources */,
+				CEC63FD11B56052300B65C21 /* DesignableLabel.swift in Sources */,
 				CE7C5A0C1B4A27D100CE4AE0 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

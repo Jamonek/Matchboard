@@ -21,16 +21,32 @@ class CategoryTableViewCell: UITableViewCell {
     weak var delegate: CategoryTableViewCellDelegate?
     
     
+    var categoryArray: [String] = []
+    var filter: [String] = []
+    
     
 
-    @IBAction func checkboxTapped(sender: AnyObject) {
+    @IBAction func checkboxTapped(sender: UIButton) {
         
-        
+
         if self.checkbox.isChecked == false {
             println("Checkbox checked")
+            println("\(categoryLabel.text!)")
+            //categoryArray.append("\(categoryLabel.text!)")
+            //println(categoryArray)
+            //delegate?.categoryTableViewCellDidTouchCheckbox(self, sender: sender)
         } else {
             println("Checkbox unchecked")
+            println("\(categoryLabel.text!)")
+            //var categoryChosen = "\(categoryLabel.text!)"
+            //let filter = categoryArray.filter() { $0 != categoryChosen }
+            //categoryArray = filter
+            //println(categoryArray)
+            //delegate?.categoryTableViewCellDidTouchCheckbox(self, sender: sender)
         }
+        
+      
+        
         delegate?.categoryTableViewCellDidTouchCheckbox(self, sender: sender)
     }
 

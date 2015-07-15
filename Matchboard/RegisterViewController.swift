@@ -84,7 +84,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         
         if phoneNumber == "" {
-            if countElements(phoneNumberTextField.text) != 10 {
+            if count(phoneNumberTextField.text) != 10 {
                 showAlert("Phone Login", message: "You must enter a 10-digit US phone number including area code.")
                 return step1()
             }
@@ -96,7 +96,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                 self.editing = true
                 if let error = error {
                     var description = error.description
-                    if countElements(description) == 0 {
+                    if count(description) == 0 {
                         description = "There was a problem with the service.\nTry again later."
                     } else if let message = error.userInfo?["error"] as? String {
                         description = message
@@ -110,7 +110,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         } else  {
             if let text = phoneNumberTextField?.text {
                 if let code = text.toInt() {
-                if countElements(text) == 4 {
+                if count(text) == 4 {
                     return doLogin(phoneNumber, code: code)
                 }
             }
@@ -173,7 +173,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
      //*********************Save Photo***********************//
     func savePhoto() {
         
-                var user = PFUser.currentUser()
+                var user = PFUser.currentUser()!
                let profilePic = self.imageView.image
                let imageData = UIImagePNGRepresentation(profilePic)
                 let profileImage = PFFile(name: "image.png", data: imageData)
@@ -191,7 +191,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     func saveData() {
-        var user = PFUser.currentUser()
+        var user = PFUser.currentUser()!
         let name = self.displayNameTextField.text
         println("\(name)")
         user["name"] = name
@@ -212,7 +212,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     //**********************Dismisses Keyboard when View Touched*********//
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         view.endEditing(true)
     }
     

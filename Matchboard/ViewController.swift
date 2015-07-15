@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Parse
+
+var AdsArray: [Ad] = []
 
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdTableViewCellDelegate{
@@ -25,13 +28,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var adArray: [AdModel] = []
     
+    var lookingForTitle = "lookingFor"
+    
     let transitionManager = TransitionManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         PFUser.currentUser()
-        
-        
         
 //        session.saveInBackgroundWithBlock {
 //            (success: Bool, error: NSError?) -> Void in
@@ -62,7 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         mySegmentedControl.setBackgroundImage(UIImage(named: "SegCtrl-normal"), forState: UIControlState.Normal, barMetrics: UIBarMetrics.Default)
         
         var attr = NSDictionary(object: UIFont(name: "Avenir Next", size: 12.0)!, forKey: NSFontAttributeName)
-        mySegmentedControl.setTitleTextAttributes(attr, forState: .Normal)
+        mySegmentedControl.setTitleTextAttributes(attr as [NSObject : AnyObject], forState: .Normal)
         
         
         tableView.backgroundColor = UIColor.clearColor()
@@ -83,51 +86,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
      
     }
     
-    
-    
-    
     //Check to see if User is logged in; If not, head over to login
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
         if (PFUser.currentUser() == nil) {
-            
             self.performSegueWithIdentifier("login", sender: self)
-            
         } else if (PFUser.currentUser() != nil) {
-        
             self.storyboard?.instantiateViewControllerWithIdentifier("ViewController")
         }
         
-        //Loading Indicator
+    
+    //Loading Indicator
         if isFirstTime {
             view.showLoading()
             isFirstTime = false
         }
-        
 //        var session = PFSession()
 //        if (session.sessionToken == nil) {
 //            println("Error Occured")
 //            PFUser.logOut()
 //            self.performSegueWithIdentifier("login", sender: self)
 //        }
-
     }
+    
     
     
     //Passing Data - PrepareForSegue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showProfile" {
-            let adVC: AdProfileViewController = segue.destinationViewController as AdProfileViewController
+            let adVC: AdProfileViewController = segue.destinationViewController as! AdProfileViewController
             let indexPath = self.tableView.indexPathForSelectedRow()
             let thisAd = adArray[indexPath!.row]
             adVC.adProfileModel = thisAd
             adVC.mainVC = self
             adVC.transitioningDelegate = transitionManager
-            
         }
     }
 
+    
     
     @IBAction func mySegmentedControlAction(sender: AnyObject) {
         if(mySegmentedControl.selectedSegmentIndex == 0)
@@ -137,8 +133,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             messagesView.hidden = true
             categoriesView.hidden = true
             settingsView.hidden = true
-            
-            
         }
         else if(mySegmentedControl.selectedSegmentIndex == 1)
         {
@@ -176,6 +170,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+   
+    
+    
     //UITableViewDataSource
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -184,23 +181,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return adArray.count 
+        return AdsArray.count
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        
         let thisAd = adArray[indexPath.row]
         
-        var cell: AdTableViewCell = tableView.dequeueReusableCellWithIdentifier("AdCell") as AdTableViewCell
+        var cell: AdTableViewCell = tableView.dequeueReusableCellWithIdentifier("AdCell") as! AdTableViewCell
         cell.backgroundColor = UIColor.clearColor()
+        
+        var adClass = PFObject(className: "Ad")
+        adClass = AdsArray[indexPath.row] as PFObject
+        var user = PFObject(className: "User")
+        
+        cell.questionLabel.text = "What are you looking for?"
+        cell.adLabel.text = "\(adClass[lookingForTitle]!)"
+        
         
         cell.profileImageView.image = thisAd.profileImage
         cell.nameLabel.text = thisAd.name
-        cell.questionLabel.text = "What are you looking for?"
-        cell.adLabel.text = thisAd.ad
+        //cell.adLabel.text = thisAd.ad
         cell.distanceLabel.text = thisAd.distance
         cell.categoryLabel.setTitle(thisAd.category, forState: UIControlState.Normal)
+        
         
         //cell.profileImageView.image = UIImage(named: "profile1")
         //cell.nameLabel.text = "Lawrence"
@@ -209,6 +215,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //cell.distanceLabel.text = "10 miles"
        // cell.categoryLabel.setTitle("Paid Service", forState: UIControlState.Normal)
         
+        
+     
         cell.delegate = self
         
         return cell
