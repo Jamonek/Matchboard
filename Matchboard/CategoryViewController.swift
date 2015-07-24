@@ -10,7 +10,7 @@ import UIKit
 
 class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CategoryTableViewCellDelegate {
 
-     @IBOutlet weak var tableView: UITableView!
+     @IBOutlet var tableView: UITableView!
     //var expandedSections: NSMutableIndexSet! = nil;
     
 
@@ -88,10 +88,9 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         let category = categoryHeader.category[indexPath.row]
         cell.categoryLabel.text = category.title
         cell.checkbox.isChecked = false
-               
+        cell.checkbox.tag = indexPath.row
         cell.delegate = self
-    
-        
+        cell.checkbox.tableView = self.tableView
         return cell
     }
     
@@ -109,19 +108,16 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     //?????????
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //println("Selected")
+        println("Selected")
         var cell: CategoryTableViewCell = tableView.dequeueReusableCellWithIdentifier("Category") as! CategoryTableViewCell
         let categoryHeader = categoryHeaders[indexPath.section]
         let category = categoryHeader.category[indexPath.row]
-        //cell.checkbox.isChecked = true
+        cell.checkbox.changeBox()
         println("\(category.title) Selected")
         categoryArray.append(category.title)
-        println(categoryArray)
+        //println(categoryArray)
+        //tableView.reloadData()
     }
-    
-    
-    
-    
     
     
     

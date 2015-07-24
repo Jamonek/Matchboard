@@ -14,8 +14,8 @@ protocol CategoryTableViewCellDelegate : class {
 
 class CategoryTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var checkbox: Checkbox!
-    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet var checkbox: Checkbox!
+    @IBOutlet var categoryLabel: UILabel!
    
     
     weak var delegate: CategoryTableViewCellDelegate?
@@ -23,9 +23,7 @@ class CategoryTableViewCell: UITableViewCell {
     
     var categoryArray: [String] = []
     var filter: [String] = []
-    
-    
-
+     
     @IBAction func checkboxTapped(sender: UIButton) {
         
 
